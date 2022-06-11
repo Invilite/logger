@@ -1,0 +1,152 @@
+2022-06-11 15:20:52 [trace]    This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:20:52 [debug]    Example debug log, debug is: false
+2022-06-11 15:20:52 [info]     Example info content true
+2022-06-11 15:20:52 [notice]   Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:20:52 [warning]  This is some warning level log
+2022-06-11 15:20:52 [error]    Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:19:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:20:52 [critical] Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:20:52 [alert]    Alert message
+2022-06-11 15:20:52 [emergency]This is bad. Call the Admin!
+2022-06-11 15:21:22 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:21:22 [debug]     Example debug log, debug is: false
+2022-06-11 15:21:22 [info]      Example info content true
+2022-06-11 15:21:22 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:21:22 [warning]   This is some warning level log
+2022-06-11 15:21:22 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:19:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:21:22 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:21:22 [alert]     Alert message
+2022-06-11 15:21:22 [emergency] This is bad. Call the Admin!
+2022-06-11 15:22:50 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:22:50 [debug]     Example debug log, debug is: false
+2022-06-11 15:22:50 [info]      Example info content true
+2022-06-11 15:22:50 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:22:50 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:19:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:22:50 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:22:50 [warning]   This is some warning level log
+2022-06-11 15:22:50 [alert]     Alert message
+2022-06-11 15:22:50 [emergency] This is bad. Call the Admin!
+2022-06-11 15:23:36 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:23:36 [debug]     Example debug log, debug is: false
+2022-06-11 15:23:36 [info]      Example info content true
+2022-06-11 15:23:36 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:23:36 [warning]   This is some warning level log
+2022-06-11 15:23:36 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:19:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:23:36 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:23:36 [alert]     Alert message
+2022-06-11 15:23:36 [emergency] This is bad. Call the Admin!
+2022-06-11 15:24:15 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:24:15 [debug]     Example debug log, debug is: false
+2022-06-11 15:24:15 [info]      Example info content true
+2022-06-11 15:24:15 [warning]   This is some warning level log
+2022-06-11 15:24:15 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:24:15 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:19:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:24:15 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:24:15 [emergency] This is bad. Call the Admin!
+2022-06-11 15:24:15 [alert]     Alert message
+2022-06-11 15:24:42 [trace]     (main) This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 15:24:42 [debug]     (main) Example debug log, debug is: false
+2022-06-11 15:24:42 [info]      (main) Example info content true
+2022-06-11 15:24:42 [notice]    (main) Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 15:24:42 [error]     (main) Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:21:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 15:24:42 [critical]  (main) Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 15:24:42 [warning]   (main) This is some warning level log
+2022-06-11 15:24:42 [alert]     (main) Alert message
+2022-06-11 15:24:42 [emergency] (main) This is bad. Call the Admin!
+2022-06-11 23:27:41 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 23:27:41 [debug]     Example debug log, debug is: false
+2022-06-11 23:27:41 [info]      Example info content true
+2022-06-11 23:27:41 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 23:27:41 [warning]   This is some warning level log
+2022-06-11 23:27:41 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:21:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 23:27:41 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 23:27:41 [alert]     Alert message
+2022-06-11 23:27:41 [emergency] This is bad. Call the Admin!
+2022-06-11 23:28:28 [trace]     This is long trace message, used to trace errors [
+  'C:\\Windows\\NodeJS_17.6\\node.exe',
+  'E:\\Node.JS\\invilite\\logger\\build\\example.js'
+]
+2022-06-11 23:28:28 [debug]     Example debug log, debug is: false
+2022-06-11 23:28:28 [info]      Example info content true
+2022-06-11 23:28:28 [notice]    Example log with symbol Symbol(foo) [Function (anonymous)]
+2022-06-11 23:28:28 [error]     Example error message 9007199254740991n Error: this is error.
+    at Object.<anonymous> (E:\Node.JS\invilite\logger\build\example.js:21:72)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1151:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+2022-06-11 23:28:28 [warning]   This is some warning level log
+2022-06-11 23:28:28 [critical]  Critical message { foo: 'baz', bar: 1 } 
+2022-06-11 23:28:28 [alert]     Alert message
+2022-06-11 23:28:28 [emergency] This is bad. Call the Admin!

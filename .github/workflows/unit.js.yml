@@ -1,0 +1,37 @@
+name: Unit tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-18.04
+          - ubuntu-20.04
+          - windows-2019
+          - windows-2022
+          - macos-10.15
+          - macos-11
+        node-version: [12.x, 14.x, 16.x, 17.x]
+        architecture:
+          - x64
+
+    name: Unit tests with Node ${{ matrix.node-version }} on ${{ matrix.os }} ${{ matrix.architecture }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Testing using Node.JS ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        architecture: ${{ matrix.architecture }}
+        cache: 'npm'
+    - run: npm ci --no-audit || npm install
+    - run: npm run build
+    - run: npm run test:unit

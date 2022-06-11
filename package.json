@@ -1,0 +1,37 @@
+{
+  "name": "@invilite/logger",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Marek Ulwański <marek@ulwanski.pl>",
+  "license": "GNU General Public License v3.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -Rf build coverage",
+    "clean:all": "npm run clean && rm -Rf node_modules",
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "test": "npm run test:unit && npm run test:func && npm run test:audit && npm run test:syntax",
+    "test:unit": "node ./node_modules/jest/bin/jest.js",
+    "test:func": "echo \"No test specified\"",
+    "test:audit": "npm audit --only=prod",
+    "test:audit:fix": "npm audit fix --only=prod",
+    "test:syntax": "eslint . --ext .ts",
+    "test:syntax:fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@invilite/date": "^1.0.3",
+    "chalk": "^4.1.2"
+  }
+}
