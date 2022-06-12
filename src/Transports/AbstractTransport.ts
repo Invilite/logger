@@ -1,5 +1,5 @@
 import EventEmitter from "events";
-import {LogLevel} from "../Logger";
+import {LogLevel} from "../";
 
 export interface TransportArguments {
     levelName: string;

@@ -1,6 +1,6 @@
 import dgram from 'dgram';
 import {AbstractTransport, TransportArguments} from "./AbstractTransport";
-import {LogLevel} from "../Logger";
+import {LogLevel} from "../";
 
 export class Udp extends AbstractTransport {
     protected timeFormat = "";

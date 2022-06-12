@@ -1,4 +1,4 @@
-import {Logger, LogLevel} from "../src/Logger";
+import {Logger, LogLevel} from "../src";
 import {Console} from "../src/Transports";
 
 describe('Logger class', () => {

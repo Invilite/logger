@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import {WriteFileOptions} from "fs";
 import {TransportArguments} from "./AbstractTransport";
-import {LogLevel} from "../Logger";
+import {LogLevel} from "../";
 import ErrnoException = NodeJS.ErrnoException;
 import {Console, LogFormat} from "./Console";
 

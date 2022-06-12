@@ -1,5 +1,5 @@
 import {AbstractTransport, TransportArguments} from "./AbstractTransport";
-import {LogLevel} from "../Logger";
+import {LogLevel} from "../";
 
 export enum LogFormat {
     FORMAT_COLOR,
