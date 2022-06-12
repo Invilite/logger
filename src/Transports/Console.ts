@@ -17,6 +17,9 @@ export class Console extends AbstractTransport {
     }
 
     public write(level: LogLevel, args: TransportArguments, message: string): boolean {
+        if (this.logLevel < level) {
+            return false;
+        }
         process.stdout.write(this.formatMessage(level, args, message));
 
         return true;

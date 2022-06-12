@@ -19,6 +19,9 @@ export class File extends Console {
     }
 
     public write(level: LogLevel, args: TransportArguments, message: string): boolean {
+        if (this.logLevel < level) {
+            return false;
+        }
         fs.writeFile(this.filePath, this.formatMessage(level, args, message), this.writeOptions, (error: ErrnoException | null) => {
             if (error) {
                 this.emit('error', error);
