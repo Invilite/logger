@@ -1,9 +1,9 @@
 {
   "name": "@invilite/logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "Marek Ulwański <marek@ulwanski.pl>",
-  "license": "GNU General Public License v3.0",
+  "license": "GPL-3.0",
   "main": "index.js",
   "scripts": {
     "clean": "rm -Rf build coverage",
