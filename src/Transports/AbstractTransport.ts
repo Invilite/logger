@@ -54,7 +54,7 @@ export abstract class AbstractTransport extends EventEmitter {
     }
 
     public getLogLevelName(): string {
-        return LogLevel[this.logLevel]
+        return LogLevel[this.logLevel];
     }
 
     public isSupportColors(): boolean {

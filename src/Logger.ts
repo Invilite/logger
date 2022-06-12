@@ -40,39 +40,39 @@ export class Logger {
         false: chalk.underline.rgb(255, 92, 60),
     };
 
-    protected static convertToString(arg: any, level: LogLevel, enableColors: boolean = false): string {
+    protected static convertToString(arg: any, level: LogLevel, enableColors = false): string {
         switch (typeof arg) {
-            case "string":
-                return (enableColors) ? Logger.colors[<LogLevel.trace>level](arg) : arg;
+        case "string":
+            return (enableColors) ? Logger.colors[<LogLevel.trace>level](arg) : arg;
 
-            case "symbol":
-            case "bigint":
-            case "object":
-            case "number":
-                if (((arg as Error).stack && (arg as Error).message)) {
-                    return (enableColors) ? Logger.colors.stackTrace((arg as Error).stack) : <string>(arg as Error).stack;
-                }
-                return util.inspect(arg, false, null, enableColors);
+        case "symbol":
+        case "bigint":
+        case "object":
+        case "number":
+            if (((arg as Error).stack && (arg as Error).message)) {
+                return (enableColors) ? Logger.colors.stackTrace((arg as Error).stack) : <string>(arg as Error).stack;
+            }
+            return util.inspect(arg, false, null, enableColors);
 
-            case "boolean":
-                if (enableColors) {
-                    return (arg) ? Logger.colors.true('true') : Logger.colors.false('false');
-                }
-                return (arg) ? 'true' : 'false';
+        case "boolean":
+            if (enableColors) {
+                return (arg) ? Logger.colors.true('true') : Logger.colors.false('false');
+            }
+            return (arg) ? 'true' : 'false';
 
-            case "function":
-                return util.inspect(arg, false, null, enableColors);
+        case "function":
+            return util.inspect(arg, false, null, enableColors);
 
-            case "undefined":
-                return '';
+        case "undefined":
+            return '';
 
-            default:
-                // As a fallback use native toString method
-                return arg.toString();
+        default:
+            // As a fallback use native toString method
+            return arg.toString();
         }
     }
 
-    protected timeFormat: string = "YY-MM-DD HH:mm:ss";
+    protected timeFormat = "YY-MM-DD HH:mm:ss";
 
     public constructor(protected readonly options: LoggerOptions = {}, protected transports: AbstractTransport[] = []) {
         if (options.timeFormat) {
@@ -180,13 +180,13 @@ export class Logger {
         return this.log(LogLevel.emergency, message);
     }
 
-    protected setTimeFormat(format: string): Logger {
+    public setTimeFormat(format: string): Logger {
         this.timeFormat = format;
 
         return this;
     }
 
-    protected getTimeFormat(): string {
+    public getTimeFormat(): string {
         return this.timeFormat;
     }
 }
