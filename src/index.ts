@@ -16,6 +16,12 @@ export enum LogLevel {
     trace,
 }
 
+export enum LogFormat {
+    FORMAT_COLOR,
+    FORMAT_PLAIN,
+    FORMAT_JSON
+}
+
 export interface LoggerOptions {
     requestId?: string;
     processName?: string;

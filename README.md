@@ -32,9 +32,8 @@ $ yarn add @invilite/logger
 ## Usage
 
 ```typescript
-import {Logger, LogLevel} from "@invilite/logger";
+import {Logger, LogLevel, LogFormat} from "@invilite/logger";
 import {Console} from "@invilite/Transports";
-import {LogFormat} from "@invilite/Transports/Console";
 
 const logger = new Logger();
 logger.addTransport(new Console(LogLevel.debug, LogFormat.FORMAT_COLOR));
