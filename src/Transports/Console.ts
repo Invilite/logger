@@ -1,11 +1,8 @@
 import {AbstractTransport, TransportArguments} from "./AbstractTransport";
-import {LogLevel} from "../";
+import {LogFormat, LogLevel} from "../";
 
-export enum LogFormat {
-    FORMAT_COLOR,
-    FORMAT_PLAIN,
-    FORMAT_JSON
-}
+// TODO: For backwards compatibility, remove it in next major release
+export {LogFormat} from "../";
 
 export class Console extends AbstractTransport {
     public constructor(logLevel: LogLevel, protected readonly logFormat: LogFormat = LogFormat.FORMAT_PLAIN) {
