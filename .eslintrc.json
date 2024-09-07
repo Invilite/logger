@@ -20,6 +20,7 @@
         "linebreak-style": ["warn", "unix"],
         "quotes": ["off"],
         "semi": ["error", "always"],
-        "@typescript-eslint/no-explicit-any": ["off"]
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/no-inferrable-types": ["off"]
     }
 }

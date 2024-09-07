@@ -1,35 +1,56 @@
-import * as fs from "fs";
-import {WriteFileOptions} from "fs";
+import {createWriteStream, WriteStream} from "fs";
 import {TransportArguments} from "./AbstractTransport";
 import {Console} from "./Console";
 import {LogFormat, LogLevel} from "../";
-import ErrnoException = NodeJS.ErrnoException;
 
+// TODO: Optimise this class for unit tests
 export class File extends Console {
-    protected readonly writeOptions: WriteFileOptions;
+    protected writeStream: WriteStream | null;
 
     public constructor(logLevel: LogLevel, logFormat: LogFormat, protected readonly filePath: string) {
         super(logLevel, logFormat);
 
-        this.writeOptions = {
-            mode: 0o666,
-            encoding: "utf-8",
-            flag: "a+"
-        };
+        this.writeStream = createWriteStream(filePath, {
+            flags: 'a',
+            encoding: 'utf-8' as BufferEncoding,
+            mode: 0o660,
+            autoClose: true,
+            emitClose: true,
+            highWaterMark: 64 * 1024, // 64KB
+        });
+
+        this.writeStream.on('error', (err) => {
+            console.error('Failed to write to log file:', err);
+            this.writeStream = null;
+        });
     }
 
-    public write(level: LogLevel, args: TransportArguments, message: string): boolean {
-        if (this.logLevel < level) {
+    public write(level: LogLevel, args: TransportArguments): boolean {
+        if (this.logLevel < level || level == LogLevel.silent) {
             return false;
         }
 
-        fs.writeFile(this.filePath, this.formatMessage(level, args, message), this.writeOptions, (error: ErrnoException | null) => {
+        if (!this.writeStream) {
+            return false;
+        }
+
+        const message: string = this.formatMessage(level, args);
+
+        this.writeStream.write(message, (error?: Error | null): void => {
             if (error) {
-                this.emit('error', error);
+                console.error(error);
             }
-            // file written successfully
         });
 
         return true;
+    }
+
+    public closeFile(): void {
+        if (!this.writeStream) {
+            return;
+        }
+
+        this.writeStream.end();
+        this.writeStream = null;
     }
 }

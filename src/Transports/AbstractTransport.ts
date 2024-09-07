@@ -1,4 +1,3 @@
-import EventEmitter from "events";
 import {LogLevel} from "../";
 
 export interface TransportArguments {
@@ -10,7 +9,7 @@ export interface TransportArguments {
     processName: string | undefined;
 }
 
-export abstract class AbstractTransport extends EventEmitter {
+export abstract class AbstractTransport {
     protected supportColors: boolean;
     protected readonly logLevel: LogLevel;
 
@@ -20,11 +19,11 @@ export abstract class AbstractTransport extends EventEmitter {
         }
 
         // Try straight match
-        for (const key of Object.values(LogLevel)) {
-            if (typeof key !== 'string') continue;
-
-            if (LogLevel[<any>key] == levelName) {
-                return <LogLevel><any>LogLevel[<any>key];
+        for (const key of Object.keys(LogLevel)) {
+            if (typeof LogLevel[key as keyof typeof LogLevel] === 'number') {
+                if (key === levelName) {
+                    return LogLevel[key as keyof typeof LogLevel];
+                }
             }
         }
 
@@ -40,14 +39,12 @@ export abstract class AbstractTransport extends EventEmitter {
         return defaultLevel;
     }
 
-    protected constructor(logLevel: LogLevel | string = LogLevel.info) {
-        super();
+    public abstract write(level: LogLevel, args: TransportArguments): boolean;
 
+    protected constructor(logLevel: LogLevel | string = LogLevel.info) {
         this.logLevel = (typeof logLevel === 'string') ? AbstractTransport.getLevelFromName(logLevel) : logLevel;
         this.supportColors = false;
     }
-
-    public abstract write(level: LogLevel, args: TransportArguments, message: string): boolean;
 
     public getLogLevel(): LogLevel {
         return this.logLevel;
