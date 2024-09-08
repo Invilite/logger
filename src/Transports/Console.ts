@@ -79,11 +79,11 @@ export class Console extends AbstractTransport {
         const spacePad: string = " ".repeat(10 - LogLevel[level].length);
 
         if (args.processName) {
-            process = `(${args.processName}) `;
+            process = `[${args.processName}] `;
         }
 
         if (args.requestId) {
-            requestId = `${args.requestId}: `;
+            requestId = `(${args.requestId}) `;
         }
 
         return(`${args.timeString} [${args.levelName}]${spacePad}${process}${requestId}${message}\r\n`);
